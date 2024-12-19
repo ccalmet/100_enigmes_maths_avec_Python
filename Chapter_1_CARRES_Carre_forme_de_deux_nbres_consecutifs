@@ -5,4 +5,15 @@ Mission : trouver l'unique carré à huit chiffres tel que ses quatre premiers c
 
 from math import *
 
+def is_carre(n):
+    if int(sqrt(n))*int(sqrt(n))==n:
+        return True
+    else:
+        return False
 
+for nb in range(3163,10000):
+    carre=nb*nb
+    debut=carre//10000
+    fin=carre-10000*debut
+    if (is_carre(debut)+1) == is_carre(fin):
+        print(carre)
