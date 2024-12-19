@@ -1,1 +1,10 @@
+'''
+Trois carrés pour le prix d'un
+Le nombre 49 est un carré à deux chiffres. Si on le découpe en deux nombres 4 et 9, on obtient deux carrés à un chiffre.
+49 est le seul carré à deux chiffres ayant cette particularité.
+Mission : Trouver l'unique carré à quatre chiffres tel que ses deux premiers chiffres et ses deux derniers chiffres 
+représentent deux  carrés à quatre chiffres. 
+'''
 
+def is_square(n):
+  
