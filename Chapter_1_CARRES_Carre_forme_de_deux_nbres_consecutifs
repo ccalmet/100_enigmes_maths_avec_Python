@@ -1,1 +1,8 @@
+'''
+Le nombre 183184 est le carré à six chiffres de 428. On remarque que ses trois premiers chiffres et ses trois derniers chiffres forment deux nombres consécutifs 183 et 184.
+Mission : trouver l'unique carré à huit chiffres tel que ses quatre premiers chiffres et ses quatre derniers chiffres représentent deux nombres consécutifs.
+'''
+
+from math import *
+
 
