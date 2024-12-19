@@ -1,1 +1,24 @@
+'''
+1089 est le carré de 33. En écrivant les chiffres de 1089 dans l'autre sens, on obtient le nombre 9801. 
+Il se trouve que 9801 est aussi un carré (puisque 99x99=9801). 1089 et 9801 sont les deux seuls carrés
+à quatre chiffres ayant cette propriété.
+Mission : trouver les deux carrés à huit chiffres qui, écrits à l'envers, sont des carrés à huit chiffres.
+'''
+
+from math import *
+
+def is_carre(n):
+    if int(sqrt(n))*int(sqrt(n))==n:
+        return True
+    else:
+        return False
+
+for nb in range(3163,10000):
+    carre=nb*nb
+    errac=''.join(reversed(str(carre)))
+    if is_carre(int(errac)):
+        print(carre, errac, int(sqrt(carre)), int(sqrt(int(errac))))
+    
+    
+
 
