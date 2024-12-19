@@ -15,5 +15,5 @@ for nb in range(3163,10000):
     carre=nb*nb
     debut=carre//10000
     fin=carre-10000*debut
-    if (is_carre(debut)+1) == is_carre(fin):
+    if debut+1 == fin:
         print(carre)
