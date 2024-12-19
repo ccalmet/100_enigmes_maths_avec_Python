@@ -1,0 +1,18 @@
+'''
+Le carré de 567 est égal à 321 489. Si on réunit les chiffres de 567 et de 321 489, on obtient tous les chiffres de 1 à 9, une seule fois chacun.
+Mission : trouver l'autre nombre entier tel que chaque chiffre excepté zéro apparaisse exactement une fois dans ce nombre et son carré.
+'''
+
+from math import *
+
+def is_carre(n):
+    if int(sqrt(n))*int(sqrt(n))==n:
+        return True
+    else:
+        return False
+
+for nb in range(316,1000):
+    carre=nb*nb
+    tout="".join(sorted((str(nb)+str(carre))))
+    if tout=='123456789':
+        print(nb, carre)
