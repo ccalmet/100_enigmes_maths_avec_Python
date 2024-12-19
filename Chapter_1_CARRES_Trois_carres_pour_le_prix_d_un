@@ -1,10 +1,22 @@
 '''
 Trois carrés pour le prix d'un
-Le nombre 49 est un carré à deux chiffres. Si on le découpe en deux nombres 4 et 9, on obtient deux carrés à un chiffre.
+Le nombre 49 est un carré à deux chiffres. Si on le découpe en deux nombres 4 et 9, on obtient deux carrés à un chiffre (différents de 0).
 49 est le seul carré à deux chiffres ayant cette particularité.
-Mission : Trouver l'unique carré à quatre chiffres tel que ses deux premiers chiffres et ses deux derniers chiffres 
-représentent deux  carrés à quatre chiffres. 
+Mission : trouver l'unique carré à quatre chiffres tel que ses deux premiers chiffres et ses deux derniers chiffres 
+représentent deux  carrés à deux chiffres (différents de 00). 
 '''
 
-def is_square(n):
-  
+from math import *
+
+def is_carre(n):
+    if int(sqrt(n))*int(sqrt(n))==n:
+        return True
+    else:
+        return False
+
+for nb in range(32,99):
+    carre=nb*nb
+    debut=carre//100
+    fin=carre-100*debut
+    if is_carre(debut) and is_carre(fin) and fin !=00:
+        print(carre)
